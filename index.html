@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/@vue/composition-api@1.0.0-rc.10/dist/vue-composition-api.js"></script>
+
+    <div id="app"></div>
+
+    <script>
+      const { ref, set } = VueCompositionAPI
+
+      Vue.use(VueCompositionAPI)
+
+      const app = new Vue({
+        template: `<div>nothing</div>`,
+        created() {
+          const state = ref({ old: ref(false) })
+          debugger
+          set(state.value, 'new', ref(true))
+          console.log('state.value', JSON.stringify(state.value))
+        }
+      }).$mount('#app')
+    </script>
+  </body>
+</html>

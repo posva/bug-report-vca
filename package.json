@@ -1,0 +1,11 @@
+{
+  "name": "bug-report-vca",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@vue/composition-api": "^1.0.0-rc.10",
+    "vue": "^2.6.13",
+    "vue-server-renderer": "^2.6.13"
+  }
+}
